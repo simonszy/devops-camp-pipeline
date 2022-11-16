@@ -23,7 +23,7 @@ pipeline {
                 }
 
             }
-        }
+        
         stage('Application docker build') {
             steps {
                 echo "Building application image"
@@ -90,11 +90,12 @@ pipeline {
                 //TODO("Lab 5 - Deploy to EKS"): deploy docker images
             }
         }
-        
+
     post {
         cleanup {
             echo "Clean workspace"
             sh 'rm -rf .git ./*'
         }
     }
+}
 }

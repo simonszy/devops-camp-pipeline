@@ -90,6 +90,7 @@ pipeline {
                 //TODO("Lab 5 - Deploy to EKS"): deploy docker images
             }
         }
+    }
 
     post {
         cleanup {
@@ -98,4 +99,4 @@ pipeline {
         }
     }
 }
-}
+
